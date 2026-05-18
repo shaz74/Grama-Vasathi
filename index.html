@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grama-Vasathi | Authentic Rural Home-stay Accelerator</title>
+    <meta name="description" content="Experience authentic rural life and Matti-Vasane (scent of the soil). Grama-Vasathi connects city dwellers with verified farm-stays and trains village hosts in hospitality.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-leaf"></i>
+            <span>Grama-Vasathi</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#discover">Discover</a></li>
+            <li><a href="#cultural-guide">Cultural Guide</a></li>
+            <li><a href="#host-academy" class="host-link">Host Academy</a></li>
+        </ul>
+        <div class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-bg">
+            <img src="./assets/hero_farm.png" alt="Lush green Indian farmland at golden hour">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Experience the Scent of the Soil</h1>
+            <p>Escape the city. Live with local families, learn their culture, and breathe the fresh rural air. A verified catalog of authentic farm-stays.</p>
+            <div class="hero-buttons">
+                <a href="#discover" class="btn btn-primary">Find a Farm-stay</a>
+                <a href="#host-academy" class="btn btn-outline">Become a Host</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- GUEST SECTION -->
+        <section id="discover" class="section">
+            <div class="section-header">
+                <h2>Verified Farm-stays</h2>
+                <p>Filter by the experiences you crave</p>
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="farming">Field Plowing</button>
+                <button class="filter-btn" data-filter="dairy">Cow Milking</button>
+                <button class="filter-btn" data-filter="cooking">Local Cooking</button>
+                <button class="filter-btn" data-filter="nature">Birdwatching</button>
+            </div>
+
+            <div class="catalog" id="farm-catalog">
+                <!-- Farm cards injected via JS -->
+            </div>
+        </section>
+
+        <!-- CULTURAL GUIDE -->
+        <section id="cultural-guide" class="section alternate-bg">
+            <div class="section-header">
+                <h2>Cultural Guide</h2>
+                <p>Bridge the urban-rural divide with respect and understanding</p>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-icon"><i class="fa-solid fa-hands-praying"></i></div>
+                    <h3>How to Greet</h3>
+                    <p>A simple "Namaskara" with folded hands goes a long way. It shows respect and instantly builds a connection with the local elders.</p>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-icon"><i class="fa-solid fa-shirt"></i></div>
+                    <h3>What to Wear</h3>
+                    <p>Modest, comfortable cotton clothing is best. Avoid overly revealing clothes to respect local customs and for comfort during activities.</p>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-icon"><i class="fa-solid fa-bowl-rice"></i></div>
+                    <h3>Dining Etiquette</h3>
+                    <p>Food is often served on banana leaves. It's customary to eat with your right hand. Wait for the host to initiate the meal.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOST ACADEMY -->
+        <section id="host-academy" class="section">
+            <div class="section-header">
+                <h2>Host Hospitality School</h2>
+                <p>Prepare your home for city guests and earn a verified badge.</p>
+            </div>
+            
+            <div class="academy-container">
+                <div class="stepper-sidebar">
+                    <ul class="stepper">
+                        <li class="step active" data-step="1">
+                            <div class="step-icon">1</div>
+                            <div class="step-text">Basic Hygiene</div>
+                        </li>
+                        <li class="step" data-step="2">
+                            <div class="step-icon">2</div>
+                            <div class="step-text">Room Setup</div>
+                        </li>
+                        <li class="step" data-step="3">
+                            <div class="step-icon">3</div>
+                            <div class="step-text">Food & Greeting</div>
+                        </li>
+                        <li class="step" data-step="4">
+                            <div class="step-icon"><i class="fa-solid fa-check"></i></div>
+                            <div class="step-text">Score</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="stepper-content">
+                    <form id="host-checklist">
+                        <!-- Step 1 -->
+                        <div class="step-pane active" id="pane-1">
+                            <h3>Basic Hygiene</h3>
+                            <p>City guests prioritize clean and safe sanitation facilities.</p>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="western_toilet" value="20">
+                                <span class="checkmark"></span>
+                                Clean Western-style toilet available?
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="safe_water" value="15">
+                                <span class="checkmark"></span>
+                                Filtered or boiled drinking water provided?
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="waste_bin" value="10">
+                                <span class="checkmark"></span>
+                                Covered waste bins in rooms and washrooms?
+                            </label>
+                        </div>
+                        
+                        <!-- Step 2 -->
+                        <div class="step-pane" id="pane-2">
+                            <h3>Room Setup</h3>
+                            <p>A comfortable resting place is essential after a day of activities.</p>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="clean_sheets" value="15">
+                                <span class="checkmark"></span>
+                                Fresh, clean bed sheets and pillows?
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="ventilation" value="10">
+                                <span class="checkmark"></span>
+                                Good ventilation and mosquito nets/repellents?
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="lock" value="10">
+                                <span class="checkmark"></span>
+                                Secure door lock from the inside?
+                            </label>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="step-pane" id="pane-3">
+                            <h3>Food & Greeting</h3>
+                            <p>Authentic warmth and local cuisine are what guests seek.</p>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="local_food" value="10">
+                                <span class="checkmark"></span>
+                                Can you serve traditional, hygienic local meals?
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="smile" value="10">
+                                <span class="checkmark"></span>
+                                Welcoming guests with a smile and "Namaskara"?
+                            </label>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="step-pane" id="pane-4">
+                            <h3>Your Readiness Score</h3>
+                            <div class="score-display">
+                                <svg viewBox="0 0 36 36" class="circular-chart">
+                                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle" id="score-circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <text x="18" y="20.35" class="percentage" id="score-text">0%</text>
+                                </svg>
+                            </div>
+                            <p id="score-message" class="score-message"></p>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" id="prev-btn" style="display: none;">Back</button>
+                            <button type="button" class="btn btn-primary" id="next-btn">Next Step</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title">Book Your Stay</h2>
+            <div class="modal-body">
+                <p>Select your dates to experience "Matti-Vasane".</p>
+                <form id="booking-form">
+                    <div class="input-group">
+                        <label for="checkin">Check-in Date</label>
+                        <input type="date" id="checkin" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="checkout">Check-out Date</label>
+                        <input type="date" id="checkout" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="guests">Guests</label>
+                        <input type="number" id="guests" min="1" max="5" value="2" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Confirm Reservation</button>
+                </form>
+            </div>
+            <div id="booking-success" style="display: none; text-align: center; padding: 2rem 0;">
+                <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: var(--success-color); margin-bottom: 1rem;"></i>
+                <h3>Booking Confirmed!</h3>
+                <p>The host has been notified. Get ready for an authentic rural experience!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <i class="fa-solid fa-leaf"></i>
+                <span>Grama-Vasathi</span>
+            </div>
+            <p>Empowering villages. Authentic experiences.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
